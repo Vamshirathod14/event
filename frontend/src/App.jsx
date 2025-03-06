@@ -23,7 +23,7 @@ function App() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/registrations', {
+      const response = await fetch('https://event-pn9w.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -73,7 +73,7 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Developed by <strong>Vamshi Rathod</strong></p>
+        <p>Developed by <strong>Vamshi Rathod CSE Dept</strong></p>
       </footer>
     </div>
   );
