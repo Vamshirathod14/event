@@ -23,11 +23,17 @@ function App() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('https://event-pn9w.onrender.com', {
+      // Use the Render backend URL
+      const response = await fetch('https://event-pn9w.onrender.com/api/registrations', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
+      if (!response.ok) {
+        throw new Error('Registration failed');
+      }
+
       const data = await response.json();
       console.log('Registration successful:', data);
       alert('Registration successful!');
@@ -73,7 +79,7 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Developed by <strong>Vamshi Rathod CSE Dept</strong></p>
+        <p>Developed by <strong>Vamshi Rathod</strong></p>
       </footer>
     </div>
   );
