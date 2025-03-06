@@ -23,7 +23,7 @@ function App() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('https://event-pn9w.onrender.com', {
+      const response = await fetch('https://event-pn9w.onrender.com'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
